@@ -1,5 +1,6 @@
 package tests;
 
+import com.codeborne.selenide.Configuration;
 import com.codeborne.selenide.Selenide;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
@@ -13,6 +14,7 @@ public class BaseTest {
     public void setUp() {
         addListener("AllureSelenide",
                 new AllureSelenide().screenshots(true).savePageSource(true));
+        Configuration.headless = true;
     }
 
 
