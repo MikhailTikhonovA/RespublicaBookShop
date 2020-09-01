@@ -10,14 +10,14 @@ import static com.codeborne.selenide.logevents.SelenideLogger.addListener;
 public class BaseTest {
 
     @BeforeEach
-    public void setUp(){
+    public void setUp() {
         addListener("AllureSelenide",
                 new AllureSelenide().screenshots(true).savePageSource(true));
     }
 
 
     @AfterEach
-    public void tearDown(){
+    public void tearDown() {
         Selenide.closeWindow();
     }
 }
