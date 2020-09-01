@@ -11,7 +11,8 @@ public class BaseTest {
 
     @BeforeEach
     public void setUp(){
-        addListener("AllureSelenide", new AllureSelenide().screenshots(true).savePageSource(true));
+        addListener("AllureSelenide",
+                new AllureSelenide().screenshots(true).savePageSource(true));
     }
 
 

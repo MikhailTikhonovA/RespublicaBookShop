@@ -3,6 +3,7 @@ package steps;
 import io.qameta.allure.Step;
 import pages.SignInPage;
 
+import static com.codeborne.selenide.Condition.exactText;
 import static com.codeborne.selenide.Condition.text;
 
 public class SignInSteps {
@@ -25,7 +26,7 @@ public class SignInSteps {
 
     @Step("Проверить текст сообщения о неверных email/password")
     public void checkTextOnRegistrationNotification(String text) {
-        signInPage.textInvalidUserData.shouldHave(text(text));
+        signInPage.textInvalidUserData.shouldHave(exactText(text));
     }
 
 
