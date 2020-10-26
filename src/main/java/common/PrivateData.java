@@ -36,9 +36,6 @@ public class PrivateData {
     public static String getValidEmail() {
         return getPrivateProperty("valid_email");
     }
-    public static String getValidUserName() {
-        return getPrivateProperty("valid_username");
-    }
 
 
     public static String getInvalidPassword() {
